@@ -20,3 +20,11 @@ def approve_candidate():
     try:
         connection = connection_db()
         cursor = connection.cursor()
+
+
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+            

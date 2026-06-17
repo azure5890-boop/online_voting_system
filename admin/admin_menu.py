@@ -1,13 +1,12 @@
 from database.db_connect import connection_db
 from admin.approve_candidate import (
     view_pending_candidates,
-    approve_candidate,
-    reject_candidate
+    approve_candidate
 )
 
 def super_admin_menu():
     while True:
-        print("\n--- Super Admins Menu ---\n")
+        print("\n--- Super Admin Menu ---\n")
         print("1. View Pending Candidate")
         print("2. Approve Candidate")
         print("3. Reject candidate")
