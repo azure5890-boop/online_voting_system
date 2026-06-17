@@ -6,6 +6,7 @@ from admin.approve_candidate import (
     view_rejected_candidates
 )
 from admin.results import view_results
+
 def super_admin_menu():
     while True:
         print("\n--- Super Admin Menu ---\n")
