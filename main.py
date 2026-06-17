@@ -3,7 +3,7 @@ from utils.id_generator import national_id_generator
 from voter.voter_register import voter_register
 from voter.voter_login import voter_login
 from candidate.candidate_register import register_candidate
-# from admin.admin_login import admin_login
+from admin.admin_login import admin_login
 
 def display_menu():
     print("\n--- Voting Menu ---\n")
@@ -37,8 +37,8 @@ def main():
                 register_candidate() 
             elif ch == "4":
                 voter_login()
-            # elif ch == "5":
-                # admin_login()
+            elif ch == "5":
+                admin_login()
             else:
                 print("Invalid Choice")
         except Exception as e:

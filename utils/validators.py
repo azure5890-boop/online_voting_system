@@ -156,4 +156,20 @@ def check_candidate_exists(national_id):
         if connection:
             connection.close()
 
-    
+def verify_admin_login(username,password):
+    try:
+        connection = connection_db()
+        cursor = connection.cursor()
+        query  = """
+            SELECT role
+            FROM admins
+            WHERE username = %s AND password = %s
+        """
+        cursor.execute(query,(username,password,))
+        results = cursor.fetchone()
+        return results
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
