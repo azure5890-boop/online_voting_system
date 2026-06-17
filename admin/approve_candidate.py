@@ -16,6 +16,40 @@ def view_pending_candidates():
         if connection:
             connection.close()
 
+
+def view_approved_candidates():
+    try:
+        connection = connection_db()
+        cursor = connection.cursor()
+        query = """
+            SELECT candidate_id, national_id, party_name, position, status FROM candidates WHERE status = 'Approved'
+            """
+        cursor.execute(query)
+        results = cursor.fetchall()
+        return results
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+
+
+def view_rejected_candidates():
+    try:
+        connection = connection_db()
+        cursor = connection.cursor()
+        query = """
+            SELECT candidate_id, national_id, party_name, position, status FROM candidates WHERE status = 'Rejected'
+            """
+        cursor.execute(query)
+        results = cursor.fetchall()
+        return results
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
+
 def approve_candidate():
     candidate_id = input("Enter Candidate ID Approve: ")
     try:
