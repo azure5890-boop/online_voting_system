@@ -25,7 +25,6 @@ def check_age_eligibility(national_id):
         if connection:
             connection.close()
     
-
 def check_citizen_exists(national_id):
     try:
         connection = connection_db()
@@ -173,3 +172,4 @@ def verify_admin_login(username,password):
             cursor.close()
         if connection:
             connection.close()
+            

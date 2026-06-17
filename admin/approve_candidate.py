@@ -49,6 +49,7 @@ def reject_candidate():
             WHERE status = 'Pending'
         """
         cursor.execute(query,(candidate_id,))
+        connection.commit()
         if cursor.rowcount > 0:
             print("\nCandidate Rejected Successfully!")
         else:
@@ -58,4 +59,3 @@ def reject_candidate():
             cursor.close()
         if connection:
             connection.close()
-            
