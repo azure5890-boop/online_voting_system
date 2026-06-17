@@ -20,24 +20,24 @@ def main():
     while True:
         display_menu()
         try:
-            ch = input("\nEnter your choice: ")
-            if ch == "1":
-                ch_1 = input("Do You Have National ID? (yes/no): ")
-                if ch_1.lower() in ["yes", "y"]:
+            choice = input("\nEnter your choice: ")
+            if choice == "1":
+                ch = input("Do You Have National ID? (yes/no): ")
+                if ch.lower() in ["yes", "y"]:
                     register_citizen()
-                elif ch_1.lower() in ["no", "n"]:
+                elif ch.lower() in ["no", "n"]:
                     print("\nGenerating National ID...")
                     print("\nYour National ID:", national_id_generator())
                     register_citizen()
                 else:
                     print("Please enter yes/y or no/n.")
-            elif ch == "2":
+            elif choice == "2":
                 voter_register()
-            elif ch == "3":
+            elif choice == "3":
                 register_candidate() 
-            elif ch == "4":
+            elif choice == "4":
                 voter_login()
-            elif ch == "5":
+            elif choice == "5":
                 admin_login()
             else:
                 print("Invalid Choice")

@@ -116,7 +116,7 @@ online_voting_system/
 ### Clone the Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/azure5890-boop/online_voting_system.git
 cd online_voting_system
 ```
 
@@ -172,7 +172,7 @@ database="election_system"
 ## Running the Application
 
 ```bash
-python main.py
+python3 main.py
 ```
 
 ---

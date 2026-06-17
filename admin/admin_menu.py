@@ -1,7 +1,8 @@
 from database.db_connect import connection_db
 from admin.approve_candidate import (
     view_pending_candidates,
-    approve_candidate
+    approve_candidate,
+    reject_candidate
 )
 
 def super_admin_menu():
@@ -28,4 +29,7 @@ def super_admin_menu():
                     print("+------------------------------+\n")
         elif choice == "2":
             approve_candidate()
+        elif choice == "2":
+            reject_candidate()
+        
 
