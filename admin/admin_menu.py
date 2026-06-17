@@ -25,7 +25,7 @@ def super_admin_menu():
                     print(f"Party Name : {party_name}")
                     print(f"Position : {position}")
                     print(f"Status : {status}")
-                    print("+------------------------------+")
+                    print("+------------------------------+\n")
         elif choice == "2":
             approve_candidate()
 
