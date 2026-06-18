@@ -4,6 +4,8 @@ from voter.voter_register import voter_register
 from voter.voter_login import voter_login
 from candidate.candidate_register import register_candidate
 from admin.admin_login import admin_login
+from candidate.candidate_status import candidate_status
+
 
 def display_menu():
     print("\n--- Voting Menu ---\n")
@@ -34,7 +36,16 @@ def main():
             elif choice == "2":
                 voter_register()
             elif choice == "3":
-                register_candidate() 
+                print("\n1. Candidate Registration")
+                print("2. Show Candidate Status\n")
+                ch_1 = input("Enter choice: ")
+                if ch_1 == "1":
+                    register_candidate()
+                elif ch_1 == "2":
+                    candidate_status()
+                elif ch_1 == "3":
+                    print("\nExisting.....")
+                    break 
             elif choice == "4":
                 voter_login()
             elif choice == "5":

@@ -19,7 +19,7 @@ def register_candidate():
         print("\nCandidate already registered.")
         return
     if check_voter_exists(national_id):
-        print("\nVoters can not register as candidates.")
+        print("\nVoters can not register as candidate.")
         return
     party_name = input("Enter Party Name: ").title()
     if not party_name.strip():
@@ -52,4 +52,3 @@ def register_candidate():
             cursor.close()
         if connection:
             connection.close()
-
