@@ -3,6 +3,7 @@ from utils.validators import (
     check_citizen_exists,
     check_age_eligibility,
     check_candidate_exists,
+    check_voter_exists
 )
 
 def register_candidate():
@@ -16,6 +17,9 @@ def register_candidate():
         return
     if check_candidate_exists(national_id):
         print("\nCandidate already registered.")
+        return
+    if check_voter_exists(national_id):
+        print("\nVoters can not register as candidates.")
         return
     party_name = input("Enter Party Name: ").title()
     if not party_name.strip():

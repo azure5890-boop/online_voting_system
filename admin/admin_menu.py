@@ -5,6 +5,7 @@ from admin.approve_candidate import (
     view_approved_candidates,
     view_rejected_candidates
 )
+
 from admin.results import view_results
 
 def super_admin_menu():
@@ -122,7 +123,6 @@ def candidate_admin_menu():
                     print(f"Position : {position}")
                     print(f"Status : {status}")
                     print("+------------------------------+\n")
-        
         else:
             print("\nInvalid choice.")
 

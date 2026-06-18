@@ -4,9 +4,8 @@ from utils.validators import (
     check_age_eligibility,
     check_citizen_exists,
     check_voter_exists,
+    check_candidate_exists
 )
-
-
 def voter_register():
     print("\n--- Voter Registration ---\n")
     try:
@@ -23,6 +22,9 @@ def voter_register():
         
         if check_voter_exists(national_id):
             print("\nYou are already registered as a voter.")
+            return
+        if check_candidate_exists(national_id):
+            print("\nCandidate can not register as a voter.")
             return
         username = input("Create Username: ")
         password = input("Create Password: ")

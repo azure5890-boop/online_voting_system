@@ -16,7 +16,6 @@ def view_pending_candidates():
         if connection:
             connection.close()
 
-
 def view_approved_candidates():
     try:
         connection = connection_db()
@@ -32,7 +31,6 @@ def view_approved_candidates():
             cursor.close()
         if connection:
             connection.close()
-
 
 def view_rejected_candidates():
     try:

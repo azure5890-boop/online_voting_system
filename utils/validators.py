@@ -138,7 +138,6 @@ def verify_login(username,password,voter_code):
             connection.close()
 
 def check_candidate_exists(national_id):
-
     try:
         connection = connection_db()
         cursor = connection.cursor()
@@ -148,7 +147,6 @@ def check_candidate_exists(national_id):
         cursor.execute(query,(national_id,))
         results = cursor.fetchone()
         return results is not None
-    
     finally:
         if cursor:
             cursor.close()

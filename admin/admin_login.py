@@ -28,6 +28,3 @@ def admin_login():
             print("\nInvalid admin role.")
     except Exception as e:
         print("An error occur during login:",e)
-
-
-        
