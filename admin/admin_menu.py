@@ -30,6 +30,7 @@ def super_admin_menu():
             else:
                 for candidate_id, national_id, party_name, position, status in candidates:
                     print("\n--- Pending Candidates ---\n")
+                    print("+------------------------------+")
                     print(f"Candidate ID : {candidate_id}")
                     print(f"National ID : {national_id}")
                     print(f"Party Name : {party_name}")
@@ -43,6 +44,7 @@ def super_admin_menu():
             else:
                 for candidate_id, national_id, party_name, position, status in candidates:
                     print("\n--- Approved Candidates ---\n")
+                    print("+------------------------------+")
                     print(f"Candidate ID : {candidate_id}")
                     print(f"National ID : {national_id}")
                     print(f"Party Name : {party_name}")
@@ -56,6 +58,7 @@ def super_admin_menu():
             else:
                 for candidate_id, national_id, party_name, position, status in candidates:
                     print("\n--- Rejected Candidates ---\n")
+                    print("+------------------------------+")
                     print(f"Candidate ID : {candidate_id}")
                     print(f"National ID : {national_id}")
                     print(f"Party Name : {party_name}")
@@ -65,7 +68,7 @@ def super_admin_menu():
         elif choice == "6":
             view_results()
         elif choice == "7":
-            print("\n Logging out.....")
+            print("\nLogging out.....")
             break
         else:
             print("\nInvalid choice.")
@@ -91,6 +94,7 @@ def candidate_admin_menu():
             else:
                 for candidate_id, national_id, party_name, position, status in candidates:
                     print("\n--- Pending Candidates ---\n")
+                    print("+------------------------------+")
                     print(f"Candidate ID : {candidate_id}")
                     print(f"National ID : {national_id}")
                     print(f"Party Name : {party_name}")
@@ -104,6 +108,7 @@ def candidate_admin_menu():
             else:
                 for candidate_id, national_id, party_name, position, status in candidates:
                     print("\n--- Approved Candidates ---\n")
+                    print("+------------------------------+")
                     print(f"Candidate ID : {candidate_id}")
                     print(f"National ID : {national_id}")
                     print(f"Party Name : {party_name}")
@@ -117,12 +122,15 @@ def candidate_admin_menu():
             else:
                 for candidate_id, national_id, party_name, position, status in candidates:
                     print("\n--- Rejected Candidates ---\n")
+                    print("+------------------------------+")
                     print(f"Candidate ID : {candidate_id}")
                     print(f"National ID : {national_id}")
                     print(f"Party Name : {party_name}")
                     print(f"Position : {position}")
                     print(f"Status : {status}")
                     print("+------------------------------+\n")
+        elif choice == "6":
+            print("\nLogging out.....")
         else:
             print("\nInvalid choice.")
 
@@ -135,7 +143,7 @@ def result_admin_menu():
         if choice == "1":
             view_results()
         elif choice == "2":
-            print("\n Logging out.....")
+            print("\nLogging out.....")
             break
         else:
             print("\nInvalid choice.")

@@ -51,7 +51,7 @@ def main():
             elif choice == "5":
                 admin_login()
             else:
-                print("Invalid Choice")
+                print("\nInvalid Choice")
         except Exception as e:
             print("An error occurred:", e)
 main()

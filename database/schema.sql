@@ -65,7 +65,7 @@ INSERT INTO admins(
     role
 )
 VALUES(
-    "super_admin",
+    "admin_1",
     "admin123",
     "super_admin"
 );
@@ -76,7 +76,7 @@ INSERT INTO admins(
     role
 )
 VALUES(
-    "candidate_admin",
+    "admin_2",
     "admin456",
     "candidate_admin"
 );
@@ -87,7 +87,7 @@ INSERT INTO admins(
     role
 )
 VALUES(
-    "result_admin",
+    "admin_3",
     "admin789",
     "result_admin"
 );
