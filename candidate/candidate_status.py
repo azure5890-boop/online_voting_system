@@ -11,7 +11,7 @@ def candidate_status():
         connection = connection_db()
         cursor = connection.cursor()
         query = """
-            SELECT status FROM candidate WHERE national_id = %s
+            SELECT status FROM candidates WHERE national_id = %s
         """
         cursor.execute(query,(national_id,))
         results = cursor.fetchone()
