@@ -8,6 +8,8 @@ from utils.validators import (
 )
 def voter_register():
     print("\n--- Voter Registration ---\n")
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()

@@ -1,8 +1,11 @@
 from database.db_connect import connection_db
 from utils.validators import verify_login
+from voter.voter_menu import voter_menu
 
 def voter_login():
     print("\n--- Voter Login ---")
+    connection = None
+    cursor = None
     try:
         username = input("Enter username: ")
         password = input("Enter password: ")
@@ -24,6 +27,7 @@ def voter_login():
             print("You have already voted.")
             return
         print("\nLogin Successful!")
+        voter_menu(voter_id)
         return voter_id
     except Exception as e:
         print("An error occurred during login:",e)

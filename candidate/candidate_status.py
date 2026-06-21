@@ -7,6 +7,8 @@ def candidate_status():
     if not check_candidate_exists(national_id):
         print("\nCandidate not found.")
         return
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()

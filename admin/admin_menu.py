@@ -6,7 +6,7 @@ from admin.approve_candidate import (
     view_rejected_candidates
 )
 
-from admin.results import view_results
+from results.view_results import view_results
 
 def super_admin_menu():
     while True:
@@ -131,6 +131,7 @@ def candidate_admin_menu():
                     print("+------------------------------+\n")
         elif choice == "6":
             print("\nLogging out.....")
+            break
         else:
             print("\nInvalid choice.")
 

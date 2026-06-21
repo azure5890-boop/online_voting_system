@@ -26,6 +26,8 @@ def register_candidate():
         print("\nParty name cannot be empty.")
         return
     position = input("Enter Position: ").title()
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()

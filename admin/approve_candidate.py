@@ -1,6 +1,8 @@
 from database.db_connect import connection_db
 
 def view_pending_candidates():
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()
@@ -17,6 +19,8 @@ def view_pending_candidates():
             connection.close()
 
 def view_approved_candidates():
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()
@@ -33,6 +37,8 @@ def view_approved_candidates():
             connection.close()
 
 def view_rejected_candidates():
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()
@@ -50,6 +56,8 @@ def view_rejected_candidates():
 
 def approve_candidate():
     candidate_id = input("Enter Candidate ID Approve: ")
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()
@@ -72,6 +80,8 @@ def approve_candidate():
             
 def reject_candidate():
     candidate_id = input("Enter Candidate ID to Reject: ")
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()

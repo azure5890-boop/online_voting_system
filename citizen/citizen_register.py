@@ -16,6 +16,8 @@ def register_citizen():
     if gender not in ["M", "F"]:
         print("Invalid Gender")
         return
+    connection = None
+    cursor = None
     try:
         connection = connection_db()
         cursor = connection.cursor()

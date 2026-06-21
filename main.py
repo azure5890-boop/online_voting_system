@@ -5,6 +5,7 @@ from voter.voter_login import voter_login
 from candidate.candidate_register import register_candidate
 from admin.admin_login import admin_login
 from candidate.candidate_status import candidate_status
+from voter.voter_menu import voter_menu
 
 
 def display_menu():
