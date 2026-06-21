@@ -23,6 +23,7 @@ CREATE TABLE voters(
     FOREIGN KEY (national_id)
     REFERENCES citizens(national_id)
     ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE candidates(
@@ -36,6 +37,7 @@ CREATE TABLE candidates(
     FOREIGN KEY (national_id)
     REFERENCES citizens(national_id)
     ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE votes(
@@ -50,6 +52,7 @@ CREATE TABLE votes(
     FOREIGN KEY (candidate_id)
     REFERENCES candidates(candidate_id)
     ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 CREATE TABLE admins(
