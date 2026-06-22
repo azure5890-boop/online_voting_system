@@ -7,7 +7,6 @@ from admin.admin_login import admin_login
 from candidate.candidate_status import candidate_status
 from voter.voter_menu import voter_menu
 
-
 def display_menu():
     print("\n--- Voting Menu ---\n")
     print("1. Citizen Registration")

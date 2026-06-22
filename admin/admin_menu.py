@@ -7,6 +7,7 @@ from admin.approve_candidate import (
 )
 
 from results.view_results import view_results
+from results.winner import show_winner
 
 def super_admin_menu():
     while True:
@@ -17,7 +18,8 @@ def super_admin_menu():
         print("4. View Approved Candidate")
         print("5. View Rejected Candidate")
         print("6. View Results")
-        print("7. Logout")
+        print("7. Show Winner")
+        print("8. Logout")
         choice = input("\nEnter your choice: ")
         if choice == "1":
             approve_candidate()
@@ -68,6 +70,8 @@ def super_admin_menu():
         elif choice == "6":
             view_results()
         elif choice == "7":
+            show_winner()
+        elif choice == "8":
             print("\nLogging out.....")
             break
         else:
@@ -139,11 +143,14 @@ def result_admin_menu():
     while True:
         print("\n--- Result Admin Menu ---\n")
         print("1. View Results")
+        print("2. Show Winner")
         print("2. Logout")
         choice = input("Enter choice: ")
         if choice == "1":
             view_results()
         elif choice == "2":
+            show_winner()
+        elif choice == "3":
             print("\nLogging out.....")
             break
         else:

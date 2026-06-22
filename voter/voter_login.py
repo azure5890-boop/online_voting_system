@@ -10,25 +10,17 @@ def voter_login():
         username = input("Enter username: ")
         password = input("Enter password: ")
         voter_code = input("Enter voter code: ")
-        result = verify_login(username,password,voter_code)
-        if result is None:
-            print("Invalid credentials.")
+        voter = verify_login(username,password,voter_code)
+        if voter is None:
+            print("\nInvalid credentials.")
             return
-        connection = connection_db()
-        cursor = connection.cursor()
-        query = """
-            SELECT voter_id , has_voted FROM voters WHERE username = %s
-            """
-        cursor.execute(query,(username,))
-        voter = cursor.fetchone()
         voter_id = voter[0]
         has_voted = voter[1]
         if has_voted:
-            print("You have already voted.")
+            print("\nYou have already voted.")
             return
         print("\nLogin Successful!")
         voter_menu(voter_id)
-        return voter_id
     except Exception as e:
         print("An error occurred during login:",e)
     finally:
@@ -36,4 +28,3 @@ def voter_login():
             cursor.close()
         if connection:
             connection.close()
-            
