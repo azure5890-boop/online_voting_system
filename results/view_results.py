@@ -31,7 +31,7 @@ def view_results():
             print(f"Vote Count: {vote_count}")
             print("+----------------------------+\n")
     except Exception as e:
-        print("Error",e)
+        print("Error:",e)
     finally:
         if cursor:
             cursor.close()
