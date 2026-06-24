@@ -2,8 +2,7 @@ from database.db_connect import connection_db
 from admin.approve_candidate import view_approved_candidates
 from utils.validators import (
     check_has_voted,
-    check_candidate_id,
-    check_election_status
+    check_candidate_id
 )
 
 def show_approved_candidate():
@@ -22,10 +21,6 @@ def show_approved_candidate():
             print("+------------------------------+\n")  
             
 def cast_vote(voter_id):
-    status = check_election_status()
-    if status != "Started":
-        print("\nElection is not currently active")
-        return
     if check_has_voted(voter_id):
         print("\nYou have already voted.")
         return
