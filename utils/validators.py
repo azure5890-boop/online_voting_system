@@ -223,4 +223,24 @@ def check_candidate_id(candidate_id):
             cursor.close()
         if connection:
             connection.close()
+
+def check_election_status():
+    connection = None
+    cursor = None
+    try:
+        connection = connection_db()
+        cursor = connection.cursor()
+        query = """
+            SELECT status
+            FROM election_status
+            WHERE election_id = 1
+            """
+        cursor.execute(query)
+        result = cursor.fetchone()
+        return result[0]
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
             

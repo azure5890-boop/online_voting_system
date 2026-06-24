@@ -55,6 +55,11 @@ CREATE TABLE votes(
     ON UPDATE CASCADE
 );
 
+CREATE TABLE election_status(
+    election_id INT PRIMARY KEY AUTO_INCREMENT,
+    status ENUM('Not Started','Started','Ended') NOT NULL
+);
+
 CREATE TABLE admins(
     admin_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
@@ -93,4 +98,11 @@ VALUES(
     "admin_3",
     "admin789",
     "result_admin"
+);
+
+INSERT INTO election_status(
+    status
+    )
+VALUES(
+    'Not Started'
 );
